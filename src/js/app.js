@@ -102,7 +102,7 @@ export default function game() {
         alert("YOU LOST!");
         window.location.reload();
       }
-      miss.textContent = `YOU ONLY GOT "${misses}" MISSES LEFT`;
+      miss.textContent = `YOU GOT "${misses}" MISSES LEFT`;
     });
   });
 }

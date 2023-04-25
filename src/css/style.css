@@ -1,0 +1,47 @@
+@font-face {
+    font-family: 'Pixeboy';
+    src: url('../fonts/Pixeboy.ttf')  format('truetype')
+}
+
+body {
+    background-color:#19793E;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    cursor: url("../img/hammer.png") 50 20, pointer;
+    font-family: 'Pixeboy';
+}
+
+h1 {
+    width: 200px;
+    font: 40px;
+    text-align: center;
+    margin: 150px;
+    font-size: 50px;
+}
+
+.game_container {
+    height: 520px;
+    width: 520px;
+    background-color:#195369;
+    display: flex;
+    flex-wrap: wrap;
+    border: 1.5px black solid;
+}
+
+.game_field {
+    height: 126px;
+    width: 126px;
+    border: 2px black solid;
+}
+
+.counter-got {
+    font-size: 35px;
+    margin: 150px;
+}
+
+.counter-misses {
+    font-size: 25px;
+}

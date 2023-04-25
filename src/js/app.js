@@ -18,34 +18,34 @@ export default function game() {
     fieldArray.random().appendChild(img);
     let speed = 1000;
 
-    function repeat () {
+    function repeat() {
       const next = fieldArray.random();
 
       if (img.parentElement !== next) {
         next.appendChild(img);
-        img.style.display = 'inline'
+        img.style.display = "inline";
       }
     }
 
     setInterval(() => {
       clearInterval(repeater);
-      img.style.display = 'inline';
+      img.style.display = "inline";
       speed -= 20;
       if (speed < 300) {
         speed = 300;
       }
-      repeater = setInterval(repeat, (speed))
-    }, 5000)
+      repeater = setInterval(repeat, speed);
+    }, 5000);
 
     let repeater = setInterval(() => {
       repeat();
-    }, speed)
+    }, speed);
 
-      setTimeout(() => {
-        setInterval(() => {
-          container.style.transform = "rotate(0deg)";
-        }, 3000);
-      }, 30000);
+    setTimeout(() => {
+      setInterval(() => {
+        container.style.transform = "rotate(0deg)";
+      }, 3000);
+    }, 30000);
 
     setTimeout(() => {
       container.style.transform = "rotate(45deg)";
@@ -84,24 +84,25 @@ export default function game() {
     }, 26000);
 
     img.addEventListener("click", () => {
-      count ++;
+      count++;
       misses = 5;
-      miss.textContent = `YOU ONLY GOT "${misses}" MISSES LEFT`
-      img.style.display = 'none';
+      miss.textContent = `YOU ONLY GOT "${misses}" MISSES LEFT`;
+      img.style.display = "none";
       if (count === 1) {
-        counter.textContent = "You got me once";        
+        counter.textContent = "You got me once";
       } else {
         counter.textContent =
           "You got me " + '"' + count.toString() + '" ' + "times";
       }
     });
-  
+
     container.addEventListener("click", () => {
-      misses --;
+      misses--;
       if (misses < 0) {
-        alert('YOU LOST!');
+        alert("YOU LOST!");
         window.location.reload();
-      };
-      miss.textContent = `YOU ONLY GOT "${misses}" MISSES LEFT`
+      }
+      miss.textContent = `YOU ONLY GOT "${misses}" MISSES LEFT`;
     });
-})};
+  });
+}

@@ -1,4 +1,4 @@
-name: Netology AHJ
+name: game2
 
 on: [push, pull_request]
 

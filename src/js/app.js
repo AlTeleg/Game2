@@ -15,6 +15,7 @@ export default function game() {
     const img = new Image();
     img.src = image;
     img.alt = "goblin";
+    img.draggable = false;
     fieldArray.random().appendChild(img);
     let speed = 1000;
 

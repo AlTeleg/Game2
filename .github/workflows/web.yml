@@ -1,4 +1,4 @@
-name: game2
+name: Game2
 
 on: [push, pull_request]
 
